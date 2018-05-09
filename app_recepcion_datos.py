@@ -13,7 +13,7 @@ def inicio():
     if request.method == 'POST':
         data = request.json
         try:
-            pass
+            return render_template('respuesta.html', respuesta = data['respuesta'])
         except Exception as e:
             return e
     else:
